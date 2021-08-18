@@ -33,7 +33,7 @@ const p7 = new Promise((resolve, reject) => {
     resolve("Completed p7");
   }, 5000);
 });
-
+// needs to be changed
 setTimeout(() => {
   Promise([p1, p2, p3, p4, p5, p6, p7]).then((values) => console.log(values));
 }, 5000);
