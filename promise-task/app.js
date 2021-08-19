@@ -1,39 +1,26 @@
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Completed p1");
-  }, 1000);
-});
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Completed p2");
-  }, 7000);
-});
-const p3 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Completed p3");
-  }, 7500);
-});
-const p4 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Completed p4");
-  }, 4000);
-});
-const p5 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Completed p5");
-  }, 6000);
-});
-const p6 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Completed p6");
-  }, 2000);
-});
-const p7 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Completed p7");
-  }, 5000);
-});
-// needs to be changed
+let createPromis = (time, n) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`Completed p${n}`);
+    }, time);
+  });
+};
+
+let p1 = createPromis(1000, 1);
+let p2 = createPromis(6000, 2);
+let p3 = createPromis(7000, 3);
+let p4 = createPromis(2000, 4);
+let p5 = createPromis(8000, 5);
+let p6 = createPromis(9000, 6);
+let p7 = createPromis(3000, 7);
+
+let promises = [p1, p2, p3, p4, p5, p6, p7];
+
 setTimeout(() => {
-  Promise([p1, p2, p3, p4, p5, p6, p7]).then((values) => console.log(values));
+  promises.forEach(checkPromise);
 }, 5000);
+
+let checkPromise = (p) => {
+  let result = p.then(console.log(p)).catch();
+  return result;
+};
