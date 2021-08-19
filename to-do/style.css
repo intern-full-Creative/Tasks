@@ -3,12 +3,16 @@
   margin: 0 auto;
 }
 
+body {
+  margin-top: 20px;
+}
+
 h1 {
   text-align: center;
 }
 
 .container {
-  width: 420px;
+  width: max-content;
 }
 
 #todo-input {
@@ -31,6 +35,8 @@ h1 {
 
 #todo-container {
   margin-top: 25px;
+  margin-left: 0px;
+  width: 400px;
 }
 
 .paragraph {
@@ -38,4 +44,14 @@ h1 {
   font-size: 20px;
   margin: 5px;
   padding-left: 20px;
+}
+
+.delete-btn {
+  float: right;
+  width: 40px;
+}
+
+.todo {
+  margin: 0;
+  margin-top: 25px;
 }
