@@ -1,17 +1,17 @@
-let inputField = document.getElementById("text-input");
-let toDoBtn = document.getElementById("add-btn");
-let toDoContainer = document.getElementById("to-do-p");
+let todoInput = document.getElementById("todo-input");
+let todoBtn = document.getElementById("todo-btn");
+let todoContainer = document.getElementById("todo-container");
 
-toDoBtn.addEventListener("click", () => {
+todoBtn.addEventListener("click", () => {
   var paragraph = document.createElement("p");
   paragraph.classList.add("paragraph");
-  paragraph.innerHTML = inputField.value;
-  toDoContainer.appendChild(paragraph);
-  inputField.value = "";
+  paragraph.innerHTML = todoInput.value;
+  todoContainer.appendChild(paragraph);
+  todoInput.value = "";
   paragraph.addEventListener("click", () => {
     paragraph.style.textDecoration = "line-through";
   });
   paragraph.addEventListener("dblclick", () => {
-    toDoContainer.removeChild(paragraph);
+    todoContainer.removeChild(paragraph);
   });
 });

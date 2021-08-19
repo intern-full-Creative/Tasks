@@ -1,5 +1,4 @@
-html,
-body {
+* {
   width: 50%;
   margin: 0 auto;
 }
@@ -9,27 +8,28 @@ h1 {
 }
 
 .container {
-  width: 400px;
+  width: 420px;
 }
 
-#text-input {
+#todo-input {
   width: 360px;
-  height: 42px;
+  height: 46px;
   border: 1px solid black;
   font-size: 25px;
   vertical-align: middle;
   outline: none;
 }
 
-#add-btn {
-  width: 32px;
-  height: 46px;
+#todo-btn {
+  width: 50px;
+  height: 50px;
   border: 1px solid black;
   vertical-align: middle;
   font-size: 30px;
+  float: right;
 }
 
-.to-do {
+#todo-container {
   margin-top: 25px;
 }
 
@@ -37,4 +37,5 @@ h1 {
   cursor: pointer;
   font-size: 20px;
   margin: 5px;
+  padding-left: 20px;
 }
