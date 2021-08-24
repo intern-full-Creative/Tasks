@@ -1,5 +1,4 @@
 let completedPromise = [];
-let incompletedPromise = [];
 
 let createPromis = (time, n) => {
   return new Promise((resolve, reject) => {
