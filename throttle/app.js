@@ -20,5 +20,5 @@ document.querySelector("#btn").addEventListener(
   "click",
   throttle(() => {
     console.log("Clicked");
-  }, 2000)
+  }, 3000)
 );
