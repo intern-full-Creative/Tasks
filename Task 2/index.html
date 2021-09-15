@@ -8,17 +8,20 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <img
-        src="./image/city.jpg"
-        id="image"
-        onmousemove="myFunction(event)"
-        onmouseout="clearCoor()"
-      />
+    <div class="main">
+      <!-- <button type="button" onclick="zoomin()">Zoom-In</button> -->
+      <div class="container">
+        <button id="btn-minus" onmousemove="zoomin()"></button>
+        <img
+          src="./image/city.jpg"
+          id="image"
+          onmousemove="myFunction(event)"
+        />
+        <button id="btn-plus" onmousemove="zoomout()"></button>
+      </div>
+      <!-- <button type="button" onclick="zoomout()">Zoom-Out</button> -->
     </div>
     <p id="demo"></p>
-    <button type="button" onclick="zoomin()">Zoom-In</button>
-    <button type="button" onclick="zoomout()">Zoom-Out</button>
     <script src="./app.js"></script>
   </body>
 </html>
