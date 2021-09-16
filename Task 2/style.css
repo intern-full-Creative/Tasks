@@ -26,9 +26,10 @@
   top: 10%;
   left: 0%;
   z-index: 1;
-  width: 120px;
+  width: 50%;
   height: 80%;
   background: transparent;
+  /* background-color: rgb(116, 116, 179, 0.5);     For viewing the button box*/
   border: none;
   cursor: pointer;
 }
@@ -36,11 +37,12 @@
 .container #btn-plus {
   position: absolute;
   top: 10%;
-  left: 85%;
+  right: 0%;
   z-index: 5;
-  width: 120px;
+  width: 50%;
   height: 80%;
   background: transparent;
+  /* background-color: rgba(179, 136, 116, 0.5);    For viewing the button box*/
   border: none;
   cursor: pointer;
 }

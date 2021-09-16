@@ -1,22 +1,34 @@
-function zoomin() {
-  let GFG = document.getElementById("image");
-  let currWidth = GFG.clientWidth;
-  GFG.style.width = currWidth + 100 + "px";
-}
+let i = 1;
 
-function zoomout() {
-  let GFG = document.getElementById("image");
-  let currWidth = GFG.clientWidth;
-  GFG.style.width = currWidth - 100 + "px";
-}
+let image = document.getElementById("container");
+let zMinus = document.getElementById("btn-minus");
+let zPlus = document.getElementById("btn-plus");
 
-function myFunction(e) {
-  let x = e.clientX;
-  let y = e.clientY;
-  let coor = "Coordinates: (" + x + "," + y + ")";
-  document.getElementById("demo").innerHTML = coor;
-}
+let throttle = (callback, delay) => {
+  let throttleTimeout = null;
 
-// function clearCoor() {
-//   document.getElementById("demo").innerHTML = "";
-// }
+  let throttledEventHandler = () => {
+    if (!throttleTimeout) {
+      callback();
+      throttleTimeout = setTimeout(() => {
+        throttleTimeout = null;
+      }, delay);
+      console.log(throttleTimeout);
+    }
+  };
+
+  return throttledEventHandler;
+};
+
+let zoomin = throttle(() => {
+  i += 0.1;
+  image.style.transform = "scale(" + i + ")";
+}, 500);
+
+let zoomout = throttle(() => {
+  i -= 0.1;
+  image.style.transform = "scale(" + i + ")";
+}, 500);
+
+zPlus.addEventListener("mousemove", zoomin);
+zMinus.addEventListener("mousemove", zoomout);

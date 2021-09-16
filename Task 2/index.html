@@ -9,17 +9,11 @@
   </head>
   <body>
     <div class="main">
-      <!-- <button type="button" onclick="zoomin()">Zoom-In</button> -->
-      <div class="container">
-        <button id="btn-minus" onmousemove="zoomin()"></button>
-        <img
-          src="./image/city.jpg"
-          id="image"
-          onmousemove="myFunction(event)"
-        />
-        <button id="btn-plus" onmousemove="zoomout()"></button>
+      <div class="container" id="container">
+        <button id="btn-minus"></button>
+        <img src="./image/city.jpg" id="image" />
+        <button id="btn-plus"></button>
       </div>
-      <!-- <button type="button" onclick="zoomout()">Zoom-Out</button> -->
     </div>
     <p id="demo"></p>
     <script src="./app.js"></script>
