@@ -1,13 +1,13 @@
 let i = 1;
 
-let image = document.getElementById("container");
-let zMinus = document.getElementById("btn-minus");
-let zPlus = document.getElementById("btn-plus");
+const image = document.getElementById("container");
+const zMinus = document.getElementById("btn-minus");
+const zPlus = document.getElementById("btn-plus");
 
-let throttle = (callback, delay) => {
+const throttle = (callback, delay) => {
   let throttleTimeout = null;
 
-  let throttledEventHandler = () => {
+  const throttledEventHandler = () => {
     if (!throttleTimeout) {
       callback();
       throttleTimeout = setTimeout(() => {
@@ -20,12 +20,12 @@ let throttle = (callback, delay) => {
   return throttledEventHandler;
 };
 
-let zoomin = throttle(() => {
+const zoomin = throttle(() => {
   i += 0.1;
   image.style.transform = "scale(" + i + ")";
 }, 500);
 
-let zoomout = throttle(() => {
+const zoomout = throttle(() => {
   i -= 0.1;
   image.style.transform = "scale(" + i + ")";
 }, 500);
